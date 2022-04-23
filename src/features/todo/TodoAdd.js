@@ -4,7 +4,8 @@ import { addToDo } from "./action";
 
 function TodoAdd() {
   const [text, setText] = useState("");
-  const nextTodoId = useSelector((state) => state.todo.length++);
+  const nextTodoId = useSelector((state) => state.todo.todos.length + 1);
+
   const dispatch = useDispatch();
 
   return (

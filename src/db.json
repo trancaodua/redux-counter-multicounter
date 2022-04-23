@@ -2,12 +2,12 @@
   "todos": [
     {
       "id": 1,
-      "text": "Hoc bai",
-      "completed": true
+      "text": "Hoc Bai",
+      "completed": false
     },
     {
       "id": 2,
-      "text": "Lau nha",
+      "text": "Lau Nha",
       "completed": false
     }
   ]
