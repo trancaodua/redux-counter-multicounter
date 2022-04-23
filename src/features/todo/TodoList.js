@@ -26,7 +26,7 @@ function TodoList() {
         <li
           key={todo.id}
           onClick={() => {
-            dispatch(toggleTodo(todo.id));
+            dispatch(toggleTodo(todo));
           }}
           style={{ textDecoration: todo.completed ? "line-through" : "none" }}
         >

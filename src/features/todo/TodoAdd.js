@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToDo } from "./action";
 
 function TodoAdd() {
   const [text, setText] = useState("");
+  const nextTodoId = useSelector((state) => state.todo.length++);
   const dispatch = useDispatch();
 
   return (
@@ -16,7 +17,7 @@ function TodoAdd() {
       />
       <button
         onClick={() => {
-          dispatch(addToDo(text));
+          dispatch(addToDo(nextTodoId, text));
           setText("");
         }}
       >
